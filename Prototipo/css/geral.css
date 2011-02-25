@@ -1,0 +1,132 @@
+/* CSS Document */
+
+.body{
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px;
+	background-color:#E8E8E8;
+	}
+
+#clear{
+	clear:both;
+	}
+
+#topo {
+	margin-top:20px;
+	width:100%;
+	height:80px;
+	background-color:#FFF;
+	float:none;
+	}
+	
+#logo{
+	margin-top:-140px;
+	margin-left:150px;
+	width:140px;
+	height:150px;
+	float:none;
+	}
+	
+#menu_super {
+	height:40px;
+	background-color:#CCC;
+	margin-top:10px;
+	float:none;
+	}
+	
+#menu_lateral{
+	float:left;
+	width:200px;
+	margin-top:100px;
+	border:1px solid #9BBA1E;
+	background-color:#FFFFFF;
+	margin-left:10px;
+	}
+	
+#rodape{
+	text-align:center;
+	background-color:#9BBA1E;
+	}
+
+.barNav a {
+	font: 12px  Arial, Verdana,Helvetica,sans-serif;
+	font-weight:bold;
+	color: #000;
+	text-decoration: none;
+	text-align: center;
+	padding: 1px 15px;
+	margin-right:1px;
+	float:right;
+	}
+
+.barNav a:hover {
+	color: #666;
+	}
+
+.carrinho{
+	width:30px;
+    float:right;
+	margin-top:10px;
+	margin-right:10px;
+	}
+
+.textoCarrinho{
+	width:60px;
+	float:right;
+	margin-top:5px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#9BBA1E;
+	text-align:center;
+	margin-right:-40px;
+	}
+	
+.atendimento{
+	width:30px;
+    float:right;
+	margin-top:10px;
+	margin-right:20px;
+	}
+	
+	
+.textoAtendimento{
+	width:80px;
+	float:right;
+	margin-top:-20px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#9BBA1E;
+	text-align:center;
+	margin-right:-55px;
+	}	
+
+.setaLink{
+	cursor:pointer;
+	}	
+
+.menu li{
+	list-style:none;
+	margin:0px 0px 0px 5px;
+	padding:0px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333333;
+	}
+	
+.tituloMenu{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#9BBA1E;
+	}
+
+.fonteItenMenu{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333333;
+	}
+	
+
+
+	
+
