@@ -1,3 +1,42 @@
+/***************************************************
+*				Menu Superior - Inicio   			*
+****************************************************/
+#menu_superior{
+	font:Arial, Verdana,Helvetica,sans-serif;
+	font-weight:bold;
+	font-size:12px;
+	color:#000;
+}
+
+#menu_superior ul{
+	list-style:none;
+	width:100%;
+	margin:0 auto;
+	padding:0;
+}
+
+#menu_superior ul li{
+	position:relative;
+	float:left;
+	margin-left:5px;
+}
+
+#menu_superior ul li{
+	position:relative;
+	float:left;
+	margin-left:5px;
+}
+
+
+/***************************************************
+*				Menu Superior - Fim     			*
+****************************************************/
+
+
+/***************************************************
+*				Menu Lateral - Inicio				*
+****************************************************/
+
 #menuVertical{
 	font-family:Verdana, Arial, Helvetica, sans-serif;
 	font-size:12px;
@@ -23,12 +62,7 @@
 	color:#9BBA1E;
 }
 
-.informatica{
-	display:block;
-	background:url(../icones/ic_informatica.gif) left top no-repeat;
-}
-
-.informatica span{
+#menuVertical ul li span{
 	display:block;
 	margin-left:33px;
 	position:relative;
@@ -47,3 +81,41 @@
 	color:#333333;
 	margin:5px 0;
 }
+
+#menuVertical ul li ul li a:hover{
+	color:#FFF;
+	background:#9BBA1E;
+}
+/***************************************************
+*				Formatação - icones					*
+****************************************************/
+
+.informatica{
+	display:block;
+	background:url(../icones/ic_informatica.gif) left top no-repeat;
+}
+
+.cameras{
+	display:block;
+	background:url(../icones/ic_filmadora.gif) left top no-repeat;
+}
+
+.telefone{
+	display:block;
+	background:url(../icones/ic_celular2.gif) left top no-repeat;
+}
+
+.games{
+	display:block;
+	background:url(../icones/ic_games.gif) left top no-repeat;
+}
+
+.video{
+	display:block;
+	background:url(../icones/ic_audio.gif) left top no-repeat;
+}
+
+
+/***************************************************
+*				Menu Lateral - Fim  				*
+****************************************************/
