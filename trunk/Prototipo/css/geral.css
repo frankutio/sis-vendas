@@ -25,40 +25,11 @@
 	height:150px;
 	float:left;	
 	}
-	
-#menu_super {
-	height:40px;
-	background-color:#CCC;
-	margin-top:-10px;
-	}
-	
-#menu_lateral{
-	float:left;
-	width:200px;
-	margin-top:100px;
-	border:1px solid #9BBA1E;
-	background-color:#FFFFFF;
-	margin-left:10px;
-	}
+
 	
 #rodape{
 	text-align:center;
 	background-color:#9BBA1E;
-	}
-
-.barNav a {
-	font: 12px  Arial, Verdana,Helvetica,sans-serif;
-	font-weight:bold;
-	color: #000;
-	text-decoration: none;
-	text-align: center;
-	padding: 1px 15px;
-	margin-right:1px;
-	float:right;
-	}
-
-.barNav a:hover {
-	color: #666;
 	}
 
 .carrinho{
@@ -100,16 +71,8 @@
 
 .setaLink{
 	cursor:pointer;
-	}	
-
-.menu li{
-	list-style:none;
-	margin:0px 0px 0px 5px;
-	padding:0px;
-	font-family:Verdana, Arial, Helvetica, sans-serif;
-	font-size:12px;
-	color:#333333;
 	}
+
 	
 .tituloMenu{
 	font-family:Verdana, Arial, Helvetica, sans-serif;
@@ -123,8 +86,3 @@
 	font-size:12px;
 	color:#333333;
 	}
-	
-
-
-	
-
