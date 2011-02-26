@@ -1,0 +1,49 @@
+#menuVertical{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333333;
+}
+
+#menuVertical ul{
+	list-style:none;
+	margin:3px 0px 2px 0px;
+	padding-left:0px;
+	width:99%;
+}
+
+
+#menuVertical ul li{
+	margin-left:2px;
+}
+
+#menuVertical ul li.tituloMenu{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#9BBA1E;
+}
+
+.informatica{
+	display:block;
+	background:url(../icones/ic_informatica.gif) left top no-repeat;
+}
+
+.informatica span{
+	display:block;
+	margin-left:33px;
+	position:relative;
+	top:6px;
+	padding-bottom:10px;
+}
+
+
+#menuVertical ul li ul li a{
+	text-decoration:none;
+	padding:3px 3px 3px 40px;
+	display:block;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	font-size:12px;
+	color:#333333;
+	margin:5px 0;
+}
