@@ -3,7 +3,7 @@
 .body{
 	margin-top:0px;
 	margin-left:0px;
-	margin-right:0px;
+	margin-right:px;
 	background-color:#E8E8E8;
 	}
 
@@ -16,7 +16,6 @@
 	width:100%;
 	height:80px;
 	background-color:#FFF;
-	float:none;
 	}
 	
 #logo{
@@ -24,14 +23,13 @@
 	margin-left:150px;
 	width:140px;
 	height:150px;
-	float:none;
+	float:left;	
 	}
 	
 #menu_super {
 	height:40px;
 	background-color:#CCC;
-	margin-top:10px;
-	float:none;
+	margin-top:-10px;
 	}
 	
 #menu_lateral{
@@ -73,7 +71,7 @@
 .textoCarrinho{
 	width:60px;
 	float:right;
-	margin-top:5px;
+	margin-top:-20px;
 	font-family:Verdana, Arial, Helvetica, sans-serif;
 	font-size:10px;
 	color:#9BBA1E;
