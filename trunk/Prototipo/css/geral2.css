@@ -25,6 +25,11 @@ body {
 	z-index:0;
 }
 
+#barra_icones{
+	width:681px;
+	float:right;
+}
+
 #barraMenu{
 	position:relative;
 	background:#CCCCCC;
@@ -68,6 +73,39 @@ body {
 .clear{
 	clear:both;
 }
+
+.caixaIco{
+	width:60px;
+    float:right;
+	position:relative;
+	margin-top:0px;
+	margin-right:20px;
+}
+
+.caixaIco img{
+	position:absolute;
+	margin-top:30px;
+	margin-left:17px;
+}
+
+.caixaTxtIco{
+	width:60px;
+	float:right;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#9BBA1E;
+	text-align:center;
+	position:relative;
+	margin-top:0px;
+	z-index:10;
+}
+
+
+.setaLink{
+	border:none;
+	cursor:pointer;
+}
+
 
 #rodape{
 	margin:3px auto;
