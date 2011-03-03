@@ -14,8 +14,9 @@
 	list-style:none;
 	padding:0;
 	position:absolute;
-	right:5px;
+	right:51px;
 	margin:5px 10px 5px 3px;
+	top: -12px;
 }
 
 #menu_superior ul li{
