@@ -1,0 +1,447 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>ANVISA</title>
+<link rel="stylesheet" type="text/css" href="estilo.css" />
+
+	<script type="text/javascript" language="javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" language="javascript" src="js/maskedinput.js"></script>
+    <script type="text/javascript" language="javascript" src="js/Modal.js"></script>
+    <script type="text/javascript" language="javascript" src="js/geral.js"></script>
+	<script type="text/javascript" language="javascript" src="js/chamada_modal.js"></script>
+	<script type="text/javascript" language="javascript" src="js/jquery.tooltip.js"></script>
+	<script type="text/javascript" language="javascript" src="js/jquery.dimensions.js"></script> 	
+	<script type="text/javascript" language="javascript" src="js/jquery-ui-datepicker.js"></script> 
+	
+
+</head>
+
+<body class="body">
+
+			<div id="fixa_posicao">
+			
+ 		   <div class="barra_acessibilidade">
+			
+				<div>
+					<a href="#"><img src="img/diminuir.gif" border="0" alt="Diminuir" title="Diminuir" /></a>
+					<a href="#"><img src="img/normal.gif" border="0" alt="Normal" title="Normal" /></a>
+					<a href="#"><img src="img/aumentar.gif" border="0" alt="Aumentar" title="Aumentar" /></a>
+				</div>
+		   </div>
+		   
+		   <div id="div-formulario-barra-tarefas">
+			
+              <div id="icones-barra-tarefas">
+			  <div title="Ajuda Geral"><img src="icones/Negativo/ajuda/16x16.png" alt="Ajuda Geral" class="seta_link" />Ajuda Geral</div>
+                <div title="Enviar" class="alertaEnvio"><img src="icones/Negativo/enviar/16x16.png" class="seta_link" alt="enviar" />Enviar</div>
+				<div title="Salvar"><img src="img/icon_salvar.gif" alt="salvar" class="seta_link" />Salvar</div>
+                
+              </div>
+			  
+	</div>
+	</div>
+			
+
+			<div id="back_menu">
+			
+             <ul id="menu">
+				
+				 <li><a href="#loremIpsum"><span onclick="seleciona_menu('menuSubDadosEvento','loremIpsum'); setaclass('expDadosEvento','menuDadosEvento');" id="expDadosEvento" class="menu_marcado seta_link"><img border="0" alt="Abrir" id="menuDadosEvento" src="img/mais_positivo.jpg" /> Produtos</span></a>
+                       <ul class="fechado" id="menuSubDadosEvento">
+                         <li ><a href="#produto1"><span onclick="seleciona_menu('menuSubTerceiro','produto1'); setaclass('expMenuDados','menuSubDados'); " id="expMenuDados" class=""><img border="0" alt="Abrir" id="menuSubDados" src="img/mais_positivo.jpg" /> Fluordeoxiglucose </span></a>
+						 
+								<ul class="fechado" id="menuSubTerceiro">
+									<li class="semfilho"><a href="#caract"><span onclick="seleciona_menu('null','caract'); setaclass('menuCaract'); " id="menuCaract" class="">Caracteriza&ccedil;&atilde;o</span></a></li>
+									<li class="semfilho"><a href="#comp"><span onclick="seleciona_menu('null','comp'); setaclass('menuComp'); " id="menuComp" class="">Composi&ccedil;&atilde;o</span></a></li>
+									<li class="semfilho"><a href="#process"><span onclick="seleciona_menu('null','process'); setaclass('menuProcess'); " id="menuProcess" class="" >Processos produtivos</span></a></li>
+									<li class="semfilho"><a href="#control"><span onclick="seleciona_menu('null','control'); setaclass('menuControl'); " id="menuControl" class="" >Controle de qualidade</span></a></li>
+									<li class="semfilho"><a href="#mud"><span onclick="seleciona_menu('null','mud'); setaclass('menuMud'); " id="menuMud" class="" >Mudan&ccedil;a durante desenvolvimento</span></a></li>
+								</ul>
+						 
+						 </li>
+                       </ul>
+                   </li>
+				
+				<li><a href="#ifa"><span onclick="seleciona_menu('menuSubEmpresa','ifa'); setaclass('expEmpresa','menuEmpresa');" id="expEmpresa" class=""><img border="0" alt="Abrir" id="menuEmpresa" src="img/mais_positivo.jpg" /> IFA </span></a>
+                       <ul class="fechado" id="menuSubEmpresa">
+                         <li><a href="#dadosProduto_empresa"><span onclick="seleciona_menu('menuSubEvento','dadosProduto_empresa'); setaclass('menuSubEmpresaDadosProduto');" id="menuSubEmpresaDadosProduto" class="">Dados do produto</span></a></li>
+                       </ul>
+                   </li>
+				
+                  				   
+                   
+				   
+                   <li><a href="#medicamentos"><span onclick="seleciona_menu('menuSubPaciente','medicamentos'); setaclass('expPaciente','menuPaciente');" id="expPaciente" class=""><img border="0" alt="Abrir" id="menuPaciente" src="img/mais_positivo.jpg" /> Medicamentos </span></a>
+                       <ul class="fechado" id="menuSubPaciente">
+                         <li><a href="#aldus_caso"><span onclick="seleciona_menu('menuSubEvento','aldus_caso'); setaclass('menuSubPacienteEvolucao');" id="menuSubPacienteEvolucao" class="">Evolu&ccedil;&atilde;o do caso</span></a></li>
+                       </ul>
+                   </li>
+                   <li class="semfilho seta_link"><a href="#seguranca"><span onclick="setaclass('menu_outra_info'); seleciona_menu(null,'seguranca');" id="menu_outra_info" class="">Seguran&ccedil;a e efic&aacute;cia</span></a></li>
+                   <li class="semfilho seta_link"><a href="#anexos"><span onclick="setaclass('menu_anexos'); seleciona_menu(null,'anexos');" id="menu_anexos" >Acompanhamento</span></a></li>
+				  <li class="semfilho seta_link"><a href="#favoritos"><span onclick="setaclass('menu_favoritos'); seleciona_menu(null,'favoritos');" id="menu_favoritos" >Favoritos</span></a></li>
+              </ul>
+</div>
+
+			 
+			 <div class="conteudo">
+			 
+						<div class="alinhaCentro">
+						  <h3><a id="loremIpsum">Produtos Cadastrados</a></h3>
+						</div>
+				
+					
+					  
+					   <div class="Medicamento-formulario-titulo"><a id="produto1">Fluordeoxiglucose</a>
+					    <div class="barra_lateral_direita_ex3">
+						 <img src="icones/Negativo/historico/16x16.png" alt="Links" title="Links" class="seta_link" />&nbsp;
+						 <img src="icones/Negativo/documento/16x16.png" alt="Anotações" title="Anotações" class="seta_link" />&nbsp;
+						 <img src="icones/Negativo/confirmar/16x16.png" alt="Favoritos" title="Favoritos" class="seta_link " />
+					     </div>
+					   </div>
+			   <div class="Medicamento-formulario-subtitulo"><span><a id="caract">Caracteriza&ccedil;&atilde;o</a></span></div>
+				  
+			   <div class="formata_texto"> 
+			   
+			   <div class="div_conteudo_esq">
+			   	<span class="textoLabel">Descri&ccedil;&atilde;o:</span><br />
+				<span>Teste de descri&ccedil;&atilde;o</span>
+			   </div>
+			   
+			   <div class="div_conteudo_dir">
+			   	<span class="textoLabel">Natureza:</span><br />
+				<span>Biol&oacute;gicos</span>			   </div>
+			   
+			    <div class="div_conteudo_esq">
+			   	<span class="textoLabel">Forma farmac&ecirc;utica espec&iacute;fica:</span><br />
+				<span>Radiof&aacute;rmacos</span>
+			   </div>
+			   
+			   <div class="div_conteudo_dir">
+			   	<span class="textoLabel">Forma de libera&ccedil;&atilde;o:</span><br />
+				<span>Retardada</span>			   </div>
+			   
+			    <div class="div_conteudo_esq">
+			   	<span class="textoLabel">Mecanismo de libera&ccedil;&atilde;o:</span><br />
+				<span>Bomba osmótica</span>
+			   </div>
+			   
+			   <div class="div_conteudo_dir">
+			   	<span class="textoLabel">O produto é importado?</span><br />
+				<span>N&atilde;o</span>			   </div>
+			   </div>
+			   
+			   <br />
+			   <div class="clear"></div>
+			   <br />
+			   <div class="Medicamento-formulario-subtitulo"><a id="comp">Composi&ccedil;&atilde;o</a></div>		   
+			   <div class="formata_texto_ex3"> 
+						<div class="formata_subtitulo">Composi&ccedil;&atilde;o do conte&uacute;do</div>
+						
+						<fieldset class="fieldset_ex3">
+							<legend class="legend">Subteste</legend>
+							
+							 <div class="div_conteudo">
+								<span class="textoLabel">Fun&ccedil;&atilde;o da F&oacute;rmula: </span><br />
+								<span>Ativo</span>
+						    </div>
+							   
+							   <div class="div_conteudo">
+								<span class="textoLabel">IFA:</span><br />
+								<span>Subteste</span>
+							   </div>
+							   
+							    <div class="div_conteudo">
+								<span class="textoLabel">Quantidade na composi&ccedil;&atilde;o:</span><br />
+								<span>123.0</span>
+							   </div>
+							   
+							   <div class="div_conteudo">
+								<span class="textoLabel">Unidade de medida:</span><br />
+								<span>Curie(s)/mililitros</span>
+							   </div>
+							   
+							   <div class="div_conteudo">
+								<span class="textoLabel">Excesso:</span><br />
+								<span>123</span>
+							   </div>
+							
+							</fieldset>
+							
+							<fieldset class="fieldset_ex3">
+							<legend class="legend">Zucapsaicina</legend>
+							
+							<div class="div_conteudo">
+								<span class="textoLabel">Fun&ccedil;&atilde;o da F&oacute;rmula: </span><br />
+								<span>Ativo</span>
+						    </div>
+							   
+							   <div class="div_conteudo">
+								<span class="textoLabel">IFA:</span><br />
+								<span>Subteste</span>
+							   </div>
+							   
+							    <div class="div_conteudo">
+								<span class="textoLabel">Quantidade na composi&ccedil;&atilde;o:</span><br />
+								<span>123.0</span>
+							   </div>
+							   
+							   <div class="div_conteudo">
+								<span class="textoLabel">Unidade de medida:</span><br />
+								<span>Curie(s)/mililitros</span>
+							   </div>
+							   
+							   <div class="div_conteudo">
+								<span class="textoLabel">Excesso:</span><br />
+								123
+							   </div>
+
+							
+							</fieldset><br />
+				</fieldset>
+				
+				<div class="formata_texto">
+						 <div class="div_conteudo">
+						 <span class="textoLabel">Fabricante:</span><br />Bayer SA
+						 </div>
+						 
+						  <div class="div_conteudo">
+						  <span class="textoLabel">Endere&ccedil;o do Fabricante:</span><br />SPWN 101 Bloco &quot;C&quot; Ed. Fabriantes - Bras&iacute;lia -DF
+						  </div>
+				
+				</div>
+
+			   </div>
+			   <br />
+			   <div class="Medicamento-formulario-subtitulo"><a id="process">Processos produtivos</a></div>
+			   <div class="formata_texto_ex3"> 
+			   
+			  
+			   
+			   <fieldset class="fieldset_ex3 "><legend class="legend">Informa&ccedil;&otilde;es do lote piloto um</legend>
+			     <div class="div_conteudo_ex3">
+					<span class="textoLabel">Identifica&ccedil;&atilde;o:</span><br />
+					Identifica&ccedil;&atilde;o do processo
+				 </div>
+				 
+				 <div class="div_conteudo_ex3">
+					<span class="textoLabel">Quantidade produzida:</span><br />
+					230
+			   </div>
+			   
+			   <div class="div_conteudo_ex3">
+					<span class="textoLabel">Unidade de medida:</span><br />
+					Litros
+			   </div>
+			   
+			   <div class="div_conteudo_ex3">
+					<span class="textoLabel">Data de fabrica&ccedil;&atilde;o:</span><br />
+					01/02/2010
+			   </div>
+			   
+			    <div class="div_conteudo_ex3">
+					<span class="textoLabel">Tamanho em unidades farmacot&eacute;cnicas:</span><br />
+					10
+			   </div>
+			   
+			   <div class="div_conteudo_ex3">
+					<span class="textoLabel"> Tamanho em unidade de medida:</span><br />
+					20
+			   </div>
+			   </fieldset>
+			   
+			   <fieldset class="fieldset_ex3">
+			   
+			   <legend class="legend">Informa&ccedil;&otilde;es do lote piloto dois </legend>
+			     <div class="div_conteudo_ex3">
+					<span class="textoLabel">Identifica&ccedil;&atilde;o:</span><br />
+					Identifica&ccedil;&atilde;o do processo
+				 </div>
+				 
+				 <div class="div_conteudo_ex3">
+					<span class="textoLabel">Quantidade produzida:</span><br />
+					230
+			   </div>
+			   
+			   <div class="div_conteudo_ex3">
+					<span class="textoLabel">Unidade de medida:</span><br />
+					Litros
+			   </div>
+			   
+			   <div class="div_conteudo_ex3">
+					<span class="textoLabel">Data de fabrica&ccedil;&atilde;o:</span><br />
+					01/02/2010
+			   </div>
+			   
+			    <div class="div_conteudo_ex3">
+					<span class="textoLabel">Tamanho em unidades farmacot&eacute;cnicas:</span><br />
+					10
+			   </div>
+			   
+			   <div class="div_conteudo_ex3">
+					<span class="textoLabel"> Tamanho em unidade de medida:</span><br />
+					20
+			   </div>
+			   </fieldset> 
+			   
+			    
+			  
+			   <fieldset class="fieldset_ex3">
+			    <legend class="legend">Valores da escala de produ&ccedil;&atilde;o </legend>
+			     <div class="div_conteudo_ex3">
+					<span class="textoLabel">Tamanho m&iacute;nimo:</span><br />
+					100
+				 </div>
+				 
+				 <div class="div_conteudo_ex3">
+					<span class="textoLabel">Tamanho m&aacute;ximo:</span><br />
+					600
+			   </div>
+			   
+			    
+			   
+			   </fieldset>
+			    <div class="div_conteudo">
+					<span class="textoLabel">Diagrama de produ&ccedil;&atilde;o:</span><br />
+					<span><a href="#" class="anexos">imagem_diagrama_teste.pdf</a></span><br />
+					
+					<br />
+			   </div>
+			   <br />
+			  </div> 
+			  
+			  
+			   <div class="Medicamento-formulario-subtitulo"><a id="control">Controle de qualidade</a></div>
+			   
+			   <div class="formata_texto_ex3">
+			   
+				  
+						<span class="textoLabel">Ensaio de controle de qualidade</span><br />
+						
+							<fieldset class="fieldset_ex3"><legend class="legend">Ensaio 1</legend>
+							<div class="div_conteudo">
+								<span class="textoLabel">Ensaio terceirizado:</span><br />
+								N&atilde;o
+						   </div>
+						   <div class="div_conteudo">
+								<span class="textoLabel">Descri&ccedil;&atilde;o do ensaio:</span><br />
+								Apecto
+						   </div>
+						   <div class="div_conteudo">
+								<span class="textoLabel">Especifica&ccedil;&atilde;o  do ensaio:</span><br />
+								<div class="formataTextArea">&nbsp;&nbsp;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div></div>
+								
+								 <div class="div_conteudo">
+								<span class="textoLabel">Sele&ccedil;&atilde;o da categoria de ensaio:</span><br />
+								III
+						   </div>
+						    
+							
+								<div class="div_conteudo">
+								
+									<span class="textoLabel">Farmacop&eacute;ica de refer&ecirc;ncia:</span><br />
+									Farmacop&eacute;ica Americana
+							   </div>
+							   <div class="div_conteudo">
+									<span class="textoLabel">Edi&ccedil;&atilde;o:</span><br />
+									3&ordf;
+							   </div>
+							    <div class="div_conteudo">
+									<span class="textoLabel">P&aacute;gina:</span><br />
+									104
+							   </div>
+							    <div class="div_conteudo">
+									<span class="textoLabel">Valida&ccedil;&atilde;o parcial :</span><br />
+									<span class="anexos"><a href="#" class="anexos">arquivo.pdf</a></span>
+							   </div><br />
+							
+							<br />
+						</fieldset>
+						<fieldset class="fieldset_ex3">
+						<legend class="legend">Ensaio 2 </legend>
+							<div class="div_conteudo">
+								<span class="textoLabel">Ensaio terceirizado:</span><br />
+								N&atilde;o
+						   </div>
+						   <div class="div_conteudo">
+								<span class="textoLabel">Descri&ccedil;&atilde;o do ensaio:</span><br />
+								Apecto
+						   </div>
+						   <div class="div_conteudo">
+								<span class="textoLabel">Especifica&ccedil;&atilde;o  do ensaio:</span><br />
+								<div class="formataTextArea">&nbsp;&nbsp;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div></div>
+								
+								 <div class="div_conteudo">
+								<span class="textoLabel">Sele&ccedil;&atilde;o da categoria de ensaio:</span><br />
+								III
+						   </div>
+						    
+							
+								<div class="div_conteudo">
+									<span class="textoLabel">Descri&ccedil;&atilde;o do m&eacute;todo :</span><br />
+									<div class="formataTextArea">&nbsp;&nbsp;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+						    </div>
+							   <div class="div_conteudo">
+									<span class="textoLabel">Justificativa das especifica&ccedil;&otilde;e de qualidade :</span><br />
+									<div class="formataTextArea">&nbsp;&nbsp;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+							   </div>
+							    <div class="div_conteudo">
+									<span class="textoLabel">Valida&ccedil;&atilde;o do m&eacute;todo anal&iacute;tico:</span><br />
+									<span class="anexos"><a href="#" class="anexos">validacao_arquivo.pdf</a></span>
+							   </div>
+						<br />
+						</fieldset>
+				   </div>
+			   
+			   <br />
+			   <div class="Medicamento-formulario-subtitulo"><a id="mud">Mudan&ccedil;a durante desenvolvimento </a></div>
+			   
+			   	<div class="formata_texto">
+			   			<div class="div_conteudo">
+									<span class="textoLabel">Mudan&ccedil;a durante o desenvolvimento:</span><br />
+									<span class="anexos"><a href="#" class="anexos">mudanca_arquivo.pdf</a></span>
+	 			  </div>
+			   </div>
+			   <br />
+					  
+					  
+					 
+			   
+			   
+					   <div class="Medicamento-formulario-titulo"><a id="PageMaker">IFA</a></div>
+					  <div class="Medicamento-formulario-subtitulo"><a id="dadosProduto_empresa">Subteste</a></div>
+					  <div class="formata_texto"> 
+						&nbsp;&nbsp;&nbsp;&nbsp;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	  </div>	
+						
+						
+						 <div class="Medicamento-formulario-titulo"><a id="aldus_pm">Aldus PageMaker</a></div>
+					  <div class="Medicamento-formulario-subtitulo"><a id="aldus_caso">Evolu&ccedil;&atilde;o do caso</a></div>
+					  <div class="formata_texto"> 
+						&nbsp;&nbsp;&nbsp;&nbsp;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	  &nbsp;&nbsp;&nbsp;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>	
+						 <div class="Medicamento-formulario-titulo"><span><a id="outra_info">Outas Informa&ccedil;&otilde;es</a> </span></div>
+					     <div class="Medicamento-formulario-subtitulo"><span>Descri&ccedil;&atilde;o Outas Informa&ccedil;&otilde;es </span></div>
+					     <div class="formata_texto"> 
+						&nbsp;&nbsp;&nbsp;&nbsp;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	  </div>		
+							
+							 <div class="Medicamento-formulario-titulo"><a  id="favoritos">Favorito </a></div>
+					  <div class="Medicamento-formulario-subtitulo">Descrição do favorito</div>
+					  <div class="formata_texto"> 
+						&nbsp;&nbsp;&nbsp;&nbsp;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	  </div>
+						
+						
+						 <div class="Medicamento-formulario-titulo"><a id="anexos">Anexos</a></div>
+					     <div class="Medicamento-formulario-subtitulo">Descrição de Anexos</div>
+					     <div class="formata_texto"> 
+						&nbsp;&nbsp;&nbsp;&nbsp;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	  </div>	
+							
+			 <!--fecha contedo--></div>
+				<!--fecha contedo-->
+			</div>
+			<!--FIM DO CONTEDO DA PGINA-->	 </div>
+			 
+			 
+			
+			<div class="rodape"></div>	
+			 
+</body>
+</html>
