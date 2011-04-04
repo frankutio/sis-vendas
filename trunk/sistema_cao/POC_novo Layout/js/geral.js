@@ -13,11 +13,6 @@ function controlaModal(){
 
 
 $(document).ready(function(){
-	
-	$(".menuFav").click(function(){
-		$(this).addClass("mudaCor");
-						  
-	});
 			   
 ///////////////////////////////////////////-------------					   
 /*Exibindo a data de modificação do arquivo*/
@@ -38,6 +33,14 @@ data_f += data_i.getMinutes();
 data_f += "";
 $('#atualizacao_prototipo').text(data_f);*/
 ///////////////////////////////////////////-------------
+
+$(".menuFav").click(function(){
+var item = $(this).attr("menuCaract");
+$("#"+item).addClass("corMenu");
+
+});
+
+
 	
 $(".campoInvalido").tooltip({
 		track: true,
@@ -1185,8 +1188,3 @@ function janelaAviso(){
 }
 
 /* função para mudar cor do link do menu para adição de favoritos*/
-function mudaCor(){
-	
-
-}
-
