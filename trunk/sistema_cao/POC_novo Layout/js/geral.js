@@ -13,6 +13,11 @@ function controlaModal(){
 
 
 $(document).ready(function(){
+	
+	$(".menuFav").click(function(){
+		$(this).addClass("mudaCor");
+						  
+	});
 			   
 ///////////////////////////////////////////-------------					   
 /*Exibindo a data de modificação do arquivo*/
@@ -1181,9 +1186,7 @@ function janelaAviso(){
 
 /* função para mudar cor do link do menu para adição de favoritos*/
 function mudaCor(){
-	$(".menuFav").click(function(){
-	$(this).addClass("mudaCor");
-						  
-	});
+	
 
 }
+
