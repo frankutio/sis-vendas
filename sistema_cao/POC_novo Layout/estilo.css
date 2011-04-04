@@ -370,7 +370,6 @@ margin-top: 5px;
 text-align:left;
 font-size:12px;
 padding-left:5px !important;
-
 }
 
 .subtitulo2 {
@@ -379,7 +378,6 @@ font-weight:bold;
 text-align:center;
 color:#000000;
 font-size:11px;
-
 }
 
 .linhaescura {
@@ -400,10 +398,5 @@ background-color: #CCCCCC;
 .corMenu{
 	font-size: 11px;
 	color:#f2c305;
-	font-family:Tahoma, Verdana, Arial;
-}
-.corMenuNormal{
-	font-size: 11px;
-	color:#fff;
 	font-family:Tahoma, Verdana, Arial;
 }
