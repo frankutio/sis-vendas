@@ -59,6 +59,7 @@
 	color: #fff;
 	font-size: 11px;
 	cursor: pointer;
+	margin-right:5px;
 }
 
 #icones-barra-tarefas div{
@@ -280,6 +281,10 @@ font-size:11px!important;
 	margin-top:5px;
 	margin-left:5px;
 }
+.div_conteudo_sub{
+	margin-top:5px;
+	margin-left:15px;
+}
 
 .div_conteudo_esq{
 	margin-top:5px;
@@ -390,4 +395,15 @@ background-color: #CCCCCC;
 	font-family:Tahoma, Verdana, Arial;
 	font-weight:bold;
 	margin-left:15px;
+}
+
+.corMenu{
+	font-size: 11px;
+	color:#f2c305;
+	font-family:Tahoma, Verdana, Arial;
+}
+.corMenuNormal{
+	font-size: 11px;
+	color:#fff;
+	font-family:Tahoma, Verdana, Arial;
 }
