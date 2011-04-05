@@ -35,8 +35,8 @@ $('#atualizacao_prototipo').text(data_f);*/
 ///////////////////////////////////////////-------------
 
 $(".menuFav").click(function(){
-var item = $(this).attr("menuCaract");
-$("#"+item).addClass("corMenu");
+	var item = $(this).attr("name");
+	$("#"+item).addClass("corMenu");
 
 });
 
