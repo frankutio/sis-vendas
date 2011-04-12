@@ -13,22 +13,33 @@
 	<script type="text/javascript" language="javascript" src="js/jquery.tooltip.js"></script>
 	<script type="text/javascript" language="javascript" src="js/jquery.dimensions.js"></script> 	
 	<script type="text/javascript" language="javascript" src="js/jquery-ui-datepicker.js"></script> 
+	 <script type="text/javascript" language="javascript" src="jquery5_2.js"></script>
 	
-	
+	<script>
+	$(document).ready(function(){
+	 $('.accordion-container > li > a').bind('click',function() {
+	  var $next = $(this).next();
+	  if ($next.is(':visible')) return false;
+	  $(this).parent().parent().find('li > ul:visible').slideUp('normal');
+	  $next.slideDown('normal');
+	  return false;
+	});});
+
+</script>
+
 
 </head>
 
 <body class="body">
 
-			<div id="fixa_posicao">
 			
+			<div id="fixa_posicao">
+			<div id="cabecalho-app">
+          <div id="logo-anvisa"><img src="img/Portal_Servicos.jpg" border="0" /></div>
+	</div>
  		   <div class="barra_acessibilidade">
 			
-				<div>
-					<a href="#"><img src="img/diminuir.gif" border="0" alt="Diminuir" title="Diminuir" /></a>
-					<a href="#"><img src="img/normal.gif" border="0" alt="Normal" title="Normal" /></a>
-					<a href="#"><img src="img/aumentar.gif" border="0" alt="Aumentar" title="Aumentar" /></a>
-				</div>
+				
 		   </div>
 		   
 		   <div id="div-formulario-barra-tarefas">
@@ -43,17 +54,17 @@
 
 			<div id="back_menu">
 			
-                <ul id="menu">
+			 <ul id="menu" class="accordion-container">
 				
-				 <li><a href="#loremIpsum"><span onclick="seleciona_menu('menuSubDadosEvento','loremIpsum'); setaclass('expDadosEvento','menuDadosEvento');" id="expDadosEvento" class="menu_marcado seta_link"><img border="0" alt="Abrir" id="menuDadosEvento" src="img/mais_positivo.jpg" /> Produtos</span></a>
-                       <ul class="fechado" id="menuSubDadosEvento">
-                         <li ><a href="#produto1"><span onclick="seleciona_menu('menuSubTerceiro','produto1'); setaclass('expMenuDados','menuSubDados'); " id="expMenuDados" class="menuFav"><img border="0" alt="Abrir" id="menuSubDados" src="img/mais_positivo.jpg" /> Fluordeoxiglucose </span></a>
+				 <li><a href="#produtos"><span onclick="seleciona_menu('menuSubDadosEvento','produtos'); setaclass('expDadosEvento','menuDadosEvento');" id="expDadosEvento" class="menu_marcado seta_link"><img border="0" alt="Abrir" id="menuDadosEvento" src="img/mais_positivo.jpg" class="mudaMenu" /> Produtos</span></a>
+                       <ul class="fechado accordion-container" id="menuSubDadosEvento">
+                         <li><a href="#produto1"><span onclick="seleciona_menu('menuSubTerceiro','produto1'); setaclass('expMenuDados','menuSubDados');" id="expMenuDados"  class="menuFav"><img border="0" alt="Abrir" id="menuSubDados" src="img/mais_positivo.jpg" class="mudaMenu" /> Fluordeoxiglucose </span></a>
 						 
-								<ul class="fechado" id="menuSubTerceiro">
-									<li class="semfilho"><a href="#caract"><span onclick="seleciona_menu('null','caract'); setaclass('menuCaract'); " id="menuCaract" class="menuFav">Caracteriza&ccedil;&atilde;o</span></a></li>
-									<li class="semfilho"><a href="#comp"><span onclick="seleciona_menu('null','comp'); setaclass('menuComp'); " id="menuComp" class="menuFav">Composi&ccedil;&atilde;o</span></a></li>
-									<li class="semfilho"><a href="#process"><span onclick="seleciona_menu('null','process'); setaclass('menuProcess'); " id="menuProcess" class="menuFav" >Processos produtivos</span></a></li>
-									<li class="semfilho"><a href="#control"><span onclick="seleciona_menu('null','control'); setaclass('menuControl'); " id="menuControl" class="menuFav" >Controle de qualidade</span></a></li>
+								<ul class="fechado accordion-container" id="menuSubTerceiro">
+									<li class="semfilho"><a href="#caract"><span onclick="seleciona_menu('null','caract'); setaclass('menuCaract'); " id="menuCaract" class="">Caracteriza&ccedil;&atilde;o</span></a></li>
+									<li class="semfilho"><a href="#comp"><span onclick="seleciona_menu('null','comp'); setaclass('menuComp'); " id="menuComp" class="">Composi&ccedil;&atilde;o</span></a></li>
+									<li class="semfilho"><a href="#process"><span onclick="seleciona_menu('null','process'); setaclass('menuProcess'); " id="menuProcess" class="" >Processos produtivos</span></a></li>
+									<li class="semfilho"><a href="#control"><span onclick="seleciona_menu('null','control'); setaclass('menuControl'); " id="menuControl" class="" >Controle de qualidade</span></a></li>
 									<li class="semfilho"><a href="#mud"><span onclick="seleciona_menu('null','mud'); setaclass('menuMud'); " id="menuMud" class="" >Mudan&ccedil;a durante desenvolvimento</span></a></li>
 								</ul>
 						 
@@ -61,9 +72,9 @@
                        </ul>
                    </li>
 				
-				<li><a href="#ifa"><span onclick="seleciona_menu('menuSubEmpresa','ifa'); setaclass('expEmpresa','menuEmpresa');" id="expEmpresa" class=""><img border="0" alt="Abrir" id="menuEmpresa" src="img/mais_positivo.jpg" /> IFA </span></a>
-                       <ul class="fechado" id="menuSubEmpresa">
-                         <li><a href="#dadosProduto_empresa"><span onclick="seleciona_menu('menuSubEvento','dadosProduto_empresa'); setaclass('menuSubEmpresaDadosProduto');" id="menuSubEmpresaDadosProduto" class="">Dados do produto</span></a></li>
+				<li><a href="#ifasCadastradas"><span onclick="seleciona_menu('menuSubEmpresa','ifasCadastradas'); setaclass('expEmpresa','menuEmpresa');" id="expEmpresa" class=""><img border="0" alt="Abrir" id="menuEmpresa" src="img/mais_positivo.jpg" class="mudaMenu" /> IFA </span></a>
+                       <ul class="fechado accordion-container" id="menuSubEmpresa">
+                         <li><a href="#subteste"><span onclick="seleciona_menu('menuSubEvento','dadosProduto_empresa'); setaclass('menuSubEmpresaDadosProduto');" id="menuSubEmpresaDadosProduto" class=""><img border="0" alt="Abrir" id="menuEmpresa" src="img/mais_positivo.jpg" class="mudaMenu" /> Subteste</span></a></li>
                        </ul>
                    </li>
 				
@@ -71,7 +82,7 @@
                    
 				   
                    <li><a href="#medicamentos"><span onclick="seleciona_menu('menuSubPaciente','medicamentos'); setaclass('expPaciente','menuPaciente');" id="expPaciente" class=""><img border="0" alt="Abrir" id="menuPaciente" src="img/mais_positivo.jpg" /> Medicamentos </span></a>
-                       <ul class="fechado" id="menuSubPaciente">
+                       <ul class="fechado accordion-container" id="menuSubPaciente">
                          <li><a href="#aldus_caso"><span onclick="seleciona_menu('menuSubEvento','aldus_caso'); setaclass('menuSubPacienteEvolucao');" id="menuSubPacienteEvolucao" class="">Evolu&ccedil;&atilde;o do caso</span></a></li>
                        </ul>
                    </li>
@@ -79,18 +90,21 @@
                    <li class="semfilho seta_link"><a href="#anexos"><span onclick="setaclass('menu_anexos'); seleciona_menu(null,'anexos');" id="menu_anexos" >Acompanhamento</span></a></li>
 				  <li class="semfilho seta_link"><a href="#favoritos"><span onclick="setaclass('menu_favoritos'); seleciona_menu(null,'favoritos');" id="menu_favoritos" >Favoritos</span></a></li>
               </ul>
+			
+               
 </div>
+
 
 			 
 			 <div class="conteudo">
 			 
 						<div class="alinhaCentro">
-						  <h3><a id="loremIpsum">Produtos Cadastrados</a> </h3>
+						  <h3><a id="produtos">Produtos Cadastrados</a> </h3>
 						</div>
 				
 					
-					  <div class="Medicamento-formulario-titulo"><a id="produto1">Fluordeoxiglucose</a></div>
-					  <div class="Medicamento-formulario-subtitulo"><span><a id="caract">Caracteriza&ccedil;&atilde;o</a></span>
+					  <div class="Medicamento-formulario-titulo"><a id="produto1"> Fluordeoxiglucose</a></div>
+					  <div class="Medicamento-formulario-subtitulo"><span><a id="caract"> Caracteriza&ccedil;&atilde;o</a></span>
 					  <div class="barra_lateral_direita_ex3">
 						 <img src="icones/Positivo/historico/16x16.png" alt="Links" title="Links" class="seta_link" />&nbsp;
 						 <img src="icones/Positivo/documento/16x16.png" alt="Anotações" title="Anotações" class="seta_link" />&nbsp;
@@ -100,14 +114,9 @@
 				  
 			   <div class="formata_texto"> 
 			   
-			   <div class="div_conteudo">
+			   <div class="div_conteudo primeiro">
 			   	<span class="textoLabel">Descri&ccedil;&atilde;o:</span><br />
 				<span>Teste de descri&ccedil;&atilde;o</span>
-			   </div>
-			   
-			   <div class="div_conteudo">
-			   	<span class="textoLabel">Natureza:</span><br />
-				<span>Biol&oacute;gicos</span>
 			   </div>
 			   
 			    <div class="div_conteudo">
@@ -125,7 +134,7 @@
 				<span>Bomba osmótica</span>
 			   </div>
 			   
-			   <div class="div_conteudo">
+			   <div class="div_conteudo ultimo">
 			   	<span class="textoLabel">O produto é importado?</span><br />
 				<span>N&atilde;o</span>
 			   </div>
@@ -137,78 +146,55 @@
 			   <div class="barra_lateral_direita_ex3">
 						 <img src="icones/Positivo/historico/16x16.png" alt="Links" title="Links" class="seta_link " />&nbsp;
 						 <img src="icones/Positivo/documento/16x16.png" alt="Anotações" title="Anotações" class="seta_link " />&nbsp;
-						 <img src="icones/Positivo/confirmar/16x16.png" alt="Favoritos" title="Favoritos" class="seta_link manuFav"/>
-				  </div>
-			   	</div>		   
+						 <img src="icones/Positivo/confirmar/16x16.png" alt="Favoritos" title="Favoritos" class="seta_link menuFav" name="menuComp"/>
+			     </div>
+		   	   </div>		   
 			   <div class="formata_texto_ex3"> 
 		   
-			   	<fieldset class="fieldset_ex3"><legend class="legend">Composi&ccedil;&atilde;o do produto</legend>
-				
-						<fieldset class="fieldset_ex3_sub">
-							<legend class="legend">Subteste</legend>
-							
-							 <div class="div_conteudo">
-								<span class="textoLabel">Fun&ccedil;&atilde;o da F&oacute;rmula: </span><br />
-								<span>Ativo</span>
-						    </div>
-							   
-							   <div class="div_conteudo">
-								<span class="textoLabel">IFA:</span><br />
-								<span>Subteste</span>
-							   </div>
-							   
-							    <div class="div_conteudo">
-								<span class="textoLabel">Quantidade na composi&ccedil;&atilde;o:</span><br />
-								<span>123.0</span>
-							   </div>
-							   
-							   <div class="div_conteudo">
-								<span class="textoLabel">Unidade de medida:</span><br />
-								<span>Curie(s)/mililitros</span>
-							   </div>
-							   
-							   <div class="div_conteudo">
-								<span class="textoLabel">Excesso:</span><br />
-								<span>123</span>
-							   </div>
-							
-							
-				</fieldset>
-							
-							<fieldset class="fieldset_ex3_sub">
-							<legend class="legend">Zucapsaicina</legend>
-							
-							<div class="div_conteudo">
-								<span class="textoLabel">Fun&ccedil;&atilde;o da F&oacute;rmula: </span><br />
-								<span>Ativo</span>
-						    </div>
-							   
-							   <div class="div_conteudo">
-								<span class="textoLabel">IFA:</span><br />
-								<span>Subteste</span>
-							   </div>
-							   
-							    <div class="div_conteudo">
-								<span class="textoLabel">Quantidade na composi&ccedil;&atilde;o:</span><br />
-								<span>123.0</span>
-							   </div>
-							   
-							   <div class="div_conteudo">
-								<span class="textoLabel">Unidade de medida:</span><br />
-								<span>Curie(s)/mililitros</span>
-							   </div>
-							   
-							   <div class="div_conteudo">
-								<span class="textoLabel">Excesso:</span><br />
-								123
-							   </div>
+			   	<fieldset class="fieldset_ex3 primeiro"><legend class="legend">Subteste</legend>
+				<table class="tabela-grid" cellpadding="0" cellspacing="0">
+					  <tr>
+						<td width="22%" class="subtitulo2">Fun&ccedil;&atilde;o da F&oacute;rmula</td>
+						<td width="11%" class="subtitulo2">IFA</td>
+						<td width="32%" class="subtitulo2">Quantidade na composi&ccedil;&atilde;o</td>
+						<td width="24%" class="subtitulo2">Unidade de medida</td>
+						<td width="11%" class="subtitulo2">Excesso</td>
+					  </tr>
+					  <tr>
+						<td class="linhaescura">Ativo</td>
+						<td class="linhaescura">Subteste</td>
+						<td class="linhaescura" align="right">123.0</td>
+						<td class="linhaescura">Curie(s)/mililitros</td>
+						<td class="linhaescura" align="right">123</td>
+					  </tr>
+				</table>
 
+						
 							
-							</fieldset><br />
 				</fieldset>
+				<br />
+				<fieldset class="fieldset_ex3">
+							<legend class="legend">Zucapsaicina</legend>
+							<table class="tabela-grid" cellpadding="0" cellspacing="0">
+					  <tr>
+						<td width="22%" class="subtitulo2">Fun&ccedil;&atilde;o da F&oacute;rmula</td>
+						<td width="11%" class="subtitulo2">IFA</td>
+						<td width="33%" class="subtitulo2">Quantidade na composi&ccedil;&atilde;o</td>
+						<td width="23%" class="subtitulo2">Unidade de medida</td>
+						<td width="11%" class="subtitulo2">Excesso</td>
+					  </tr>
+					  <tr>
+						<td class="linhaescura">Ativo</td>
+						<td class="linhaescura">Zucapsaicina</td>
+						<td class="linhaescura" align="right">123.0</td>
+						<td class="linhaescura">Curie(s)/mililitros</td>
+						<td class="linhaescura" align="right">123</td>
+					  </tr>
+					</table>
+				 </fieldset>
 				
 				<div class="formata_texto">
-						 <div class="div_conteudo">
+						 <div class="div_conteudo primeiro">
 						 <span class="textoLabel">Fabricante:</span><br />Bayer SA
 						 </div>
 						 
@@ -225,15 +211,15 @@
 			   <div class="barra_lateral_direita_ex3">
 						 <img src="icones/Positivo/historico/16x16.png" alt="Links" title="Links" class="seta_link " />&nbsp;
 						 <img src="icones/Positivo/documento/16x16.png" alt="Anotações" title="Anotações" class="seta_link " />&nbsp;
-						 <img src="icones/Positivo/confirmar/16x16.png" alt="Favoritos" title="Favoritos" class="seta_link " />
-				  </div>
-				  </div>
-			   <div class="formata_texto_ex3"> 
+						 <img src="icones/Positivo/confirmar/16x16.png" alt="Favoritos" title="Favoritos" class="seta_link menuFav" name="menuProcess" />
+			     </div>
+			   </div>
+			   <div class="formata_texto_ex3 primeiro"> 
 			   
 			  
 			   
 			   <fieldset class="fieldset_ex3 "><legend class="legend">Informa&ccedil;&otilde;es do lote piloto um</legend>
-			     <div class="div_conteudo_ex3">
+			     <div class="div_conteudo_ex3 primeiro">
 					<span class="textoLabel">Identifica&ccedil;&atilde;o:</span><br />
 					Identifica&ccedil;&atilde;o do processo
 				 </div>
@@ -258,16 +244,16 @@
 					10
 			   </div>
 			   
-			   <div class="div_conteudo_ex3">
+			   <div class="div_conteudo_ex3 ultimo">
 					<span class="textoLabel"> Tamanho em unidade de medida:</span><br />
 					20
 			   </div>
 			   </fieldset>
-			   
+			   <br />
 			   <fieldset class="fieldset_ex3">
 			   
 			   <legend class="legend">Informa&ccedil;&otilde;es do lote piloto dois </legend>
-			     <div class="div_conteudo_ex3">
+			     <div class="div_conteudo_ex3 primeiro">
 					<span class="textoLabel">Identifica&ccedil;&atilde;o:</span><br />
 					Identifica&ccedil;&atilde;o do processo
 				 </div>
@@ -292,22 +278,22 @@
 					10
 			   </div>
 			   
-			   <div class="div_conteudo_ex3">
+			   <div class="div_conteudo_ex3 ultimo">
 					<span class="textoLabel"> Tamanho em unidade de medida:</span><br />
 					20
 			   </div>
 			   </fieldset> 
 			   
-			    
+			    <br />
 			  
 			   <fieldset class="fieldset_ex3">
 			    <legend class="legend">Valores da escala de produ&ccedil;&atilde;o </legend>
-			     <div class="div_conteudo_ex3">
+			     <div class="div_conteudo_ex3 primeiro">
 					<span class="textoLabel">Tamanho m&iacute;nimo:</span><br />
 					100
 				 </div>
 				 
-				 <div class="div_conteudo_ex3">
+				 <div class="div_conteudo_ex3 ultimo">
 					<span class="textoLabel">Tamanho m&aacute;ximo:</span><br />
 					600
 			   </div>
@@ -317,7 +303,7 @@
 			   </fieldset>
 			    <div class="div_conteudo_ex3">
 					<span class="textoLabel">Diagrama de produ&ccedil;&atilde;o:</span><br />
-					<span><a href="#" class="anexos">imagem_diagrama_teste.pdf</a></span><br />
+					<span><img src="icones/pdf_2.png" border="0"  />&nbsp;<a href="#" class="anexos"> imagem_diagrama_teste.pdf</a></span><br />
 					
 					<br />
 			   </div>
@@ -331,16 +317,16 @@
 						 <img src="icones/Positivo/historico/16x16.png" alt="Links" title="Links" class="seta_link " />&nbsp;
 						 <img src="icones/Positivo/documento/16x16.png" alt="Anotações" title="Anotações" class="seta_link " />&nbsp;
 						 <img src="icones/Positivo/confirmar/16x16.png" alt="Favoritos" title="Favoritos" class="seta_link " />
-				  </div>
-				  </div>
+			     </div>
+			   </div>
 			   
 			   <div class="formata_texto_ex3">
 			   
 				   <div class="div_conteudo">
 						<fieldset class="fieldset_ex3"><legend class="legend">Ensaio de controle de qualidade</legend>
-						
+						<br />
 							<fieldset class="fieldset_ex3_sub"><legend class="legend">Ensaio 1</legend>
-							<div class="div_conteudo">
+							<div class="div_conteudo ">
 								<span class="textoLabel">Ensaio terceirizado:</span><br />
 								N&atilde;o
 						   </div>
@@ -357,27 +343,27 @@
 								III
 						   </div>
 						    
-							<fieldset class="fieldset_ex3_sub">
-							<legend class="legend">Farmacop&eacute;ico</legend>
-								<div class="div_conteudo">
+							<div class="div_conteudo">
+									<span class="textoLabel">Farmacop&eacute;ica:</span>
+						    </div>
+								<div class="div_conteudo_ex3">
 									<span class="textoLabel">Farmacop&eacute;ica de refer&ecirc;ncia:</span><br />
 									Farmacop&eacute;ica Americana
 							   </div>
-							   <div class="div_conteudo">
+							   <div class="div_conteudo_ex3">
 									<span class="textoLabel">Edi&ccedil;&atilde;o:</span><br />
 									3&ordf;
 							   </div>
-							    <div class="div_conteudo">
+							    <div class="div_conteudo_ex3">
 									<span class="textoLabel">P&aacute;gina:</span><br />
 									104
 							   </div>
-							    <div class="div_conteudo">
+							    <div class="div_conteudo_ex3 ultimo">
 									<span class="textoLabel">Valida&ccedil;&atilde;o parcial :</span><br />
-									<span class="anexos"><a href="#" class="anexos">arquivo.pdf</a></span>
-							   </div><br />
-							</fieldset>
-							<br />
+									<span><img src="icones/pdf_2.png" border="0"  />&nbsp;<a href="#" class="anexos">arquivo.pdf</a></span>
+							   </div>
 						</fieldset>
+						<br />
 						<fieldset class="fieldset_ex3_sub">
 						<legend class="legend">Ensaio 2 </legend>
 							<div class="div_conteudo">
@@ -389,29 +375,30 @@
 								Apecto
 						   </div>
 						   <div class="div_conteudo">
+									<span class="textoLabel">N&atilde;o Farmacop&eacute;ico:</span>
+					    </div>
+						   <div class="div_conteudo_ex3">
 								<span class="textoLabel">Especifica&ccedil;&atilde;o  do ensaio:</span><br />
 								<div class="formataTextArea">&nbsp;&nbsp;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div></div>
 								
-								 <div class="div_conteudo">
+								 <div class="div_conteudo_ex3">
 								<span class="textoLabel">Sele&ccedil;&atilde;o da categoria de ensaio:</span><br />
 								III
 						   </div>
 						    
-							<fieldset class="fieldset_ex3_sub">
-							<legend class="legend">N&atilde;o Farmacop&eacute;ico</legend>
-								<div class="div_conteudo">
+							
+								<div class="div_conteudo_ex3">
 									<span class="textoLabel">Descri&ccedil;&atilde;o do m&eacute;todo :</span><br />
 									<div class="formataTextArea">&nbsp;&nbsp;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
 						    </div>
-							   <div class="div_conteudo">
+							   <div class="div_conteudo_ex3">
 									<span class="textoLabel">Justificativa das especifica&ccedil;&otilde;e de qualidade :</span><br />
 									<div class="formataTextArea">&nbsp;&nbsp;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
 							   </div>
-							    <div class="div_conteudo">
+							    <div class="div_conteudo_ex3">
 									<span class="textoLabel">Valida&ccedil;&atilde;o do m&eacute;todo anal&iacute;tico:</span><br />
-									<span class="anexos"><a href="#" class="anexos">validacao_arquivo.pdf</a></span>
+									<span><img src="icones/pdf_2.png" border="0"  />&nbsp;<a href="#" class="anexos">validacao_arquivo.pdf</a></span>
 							   </div>
-							</fieldset>
 							<br />
 						</fieldset>
 						<br />
@@ -426,20 +413,52 @@
 						 <img src="icones/Positivo/historico/16x16.png" alt="Links" title="Links" class="seta_link " />&nbsp;
 						 <img src="icones/Positivo/documento/16x16.png" alt="Anotações" title="Anotações" class="seta_link " />&nbsp;
 						 <img src="icones/Positivo/confirmar/16x16.png" alt="Favoritos" title="Favoritos" class="seta_link " />
-				  </div>
-				  </div>
+			     </div>
+			   </div>
 			   
 			   	<div class="formata_texto">
-			   			<div class="div_conteudo">
+			   			<div class="div_conteudo primeiro">
 									<span class="textoLabel">Mudan&ccedil;a durante o desenvolvimento:</span><br />
-									<span class="anexos"><a href="#" class="anexos">mudanca_arquivo.pdf</a></span>
-			 			  </div>
+									<span class="anexos"><img src="icones/pdf_2.png" border="0"  />&nbsp;<a href="#" class="anexos">mudanca_arquivo.pdf</a></span>
+	 			  </div>
 			   </div>
 			   
 			   <br />
+			   <hr />
+			   <div class="alinhaCentro">
+						  <h3><a id="ifasCadastradas">IFA's Cadastradas</a> </h3>
+			   </div>
+					   <div class="Medicamento-formulario-titulo"><a id="subteste">Subteste</a></div>
+					   
+					  <div class="Medicamento-formulario-subtitulo"><a id="caracterizacao">Caracteriza</a>&ccedil;&atilde;o
+					  <div class="barra_lateral_direita_ex3">
+						 <img src="icones/Positivo/historico/16x16.png" alt="Links" title="Links" class="seta_link " />&nbsp;
+						 <img src="icones/Positivo/documento/16x16.png" alt="Anotações" title="Anotações" class="seta_link " />&nbsp;
+						 <img src="icones/Positivo/confirmar/16x16.png" alt="Favoritos" title="Favoritos" class="seta_link " />
+				  </div></div>
+					  
+					  
+					   
+			   	<div class="formata_texto">
+			   			<div class="div_conteudo">
+									<span class="textoLabel">Nome do IFA:</span><br />
+									<span>Subteste</span>
+	 			  </div>
 			   
-					   <div class="Medicamento-formulario-titulo"><a id="ifa">IFA</a></div>
-					  <div class="Medicamento-formulario-subtitulo"><a id="dadosProduto_empresa">Dados do produto</a></div>
+			   			<div class="div_conteudo">
+									<span class="textoLabel">Origem:</span><br />
+									<span>Origem 001 </span>
+	 			  </div>
+						  <div class="div_conteudo">
+									<span class="textoLabel"><span id="formSubstancia:panelCaracterizacao"><span id="formSubstancia:painelFabricanteCaracterizacao">Fabricante</span></span>:</span><br />
+									Visa Estadual Teste
+						  </div>
+						  
+			   </div>
+						
+						
+						<div class="Medicamento-formulario-titulo"><a id="zuca">Zucapsaicina</a></div>
+					  <div class="Medicamento-formulario-subtitulo"><a id="">Caracteriza</a>&ccedil;&atilde;o</div>
 					  <div class="formata_texto"> 
 						&nbsp;&nbsp;&nbsp;&nbsp;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	  </div>	
 						
