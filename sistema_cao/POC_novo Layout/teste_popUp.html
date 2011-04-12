@@ -46,7 +46,7 @@
 				
 				 <li><a href="#loremIpsum"><span onclick="seleciona_menu('menuSubDadosEvento','loremIpsum'); setaclass('expDadosEvento','menuDadosEvento');" id="expDadosEvento" class="menu_marcado seta_link"><img border="0" alt="Abrir" id="menuDadosEvento" src="img/mais_positivo.jpg" /> Produtos</span></a>
                        <ul class="fechado" id="menuSubDadosEvento">
-                         <li><a href="#produto1"><span onclick="seleciona_menu('menuSubTerceiro','produto1'); setaclass('expMenuDados','menuSubDados');" id="expMenuDados"  class=""><img border="0" alt="Abrir" id="menuSubDados" src="img/mais_positivo.jpg" /> Fluordeoxiglucose </span></a>
+                         <li><a href="#produto1"><span onclick="seleciona_menu('menuSubTerceiro','produto1'); setaclass('expMenuDados','menuSubDados');" id="expMenuDados"  class="menuFav"><img border="0" alt="Abrir" id="menuSubDados" src="img/mais_positivo.jpg" /> Fluordeoxiglucose </span></a>
 						 
 								<ul class="fechado" id="menuSubTerceiro">
 									<li class="semfilho"><a href="#caract"><span onclick="seleciona_menu('null','caract'); setaclass('menuCaract'); " id="menuCaract" class="">Caracteriza&ccedil;&atilde;o</span></a></li>
@@ -93,7 +93,7 @@
 					    <div class="barra_lateral_direita_ex3">
 						 <img src="icones/Negativo/historico/16x16.png" alt="Links" title="Links" class="seta_link" />&nbsp;
 						 <img src="icones/Negativo/documento/16x16.png" alt="Anotações" title="Anotações" class="seta_link" />&nbsp;
-						 <img src="icones/Negativo/confirmar/16x16.png" alt="Favoritos" title="Favoritos" class="seta_link " onclick="mudaCor('expMenuDados');" />
+						 <img src="icones/Negativo/confirmar/16x16.png" alt="Favoritos" title="Favoritos" class="seta_link menuFav" name="expMenuDados" />
 					     </div>
 					   </div>
 			   <div class="Medicamento-formulario-subtitulo"><span><a id="caract">Caracteriza&ccedil;&atilde;o</a></span></div>
@@ -132,10 +132,8 @@
 			   <div class="clear"></div>
 			   <br />
 			   <div class="Medicamento-formulario-subtitulo"><a id="comp">Composi&ccedil;&atilde;o</a></div>		   
-			   <div class="formata_texto_ex3"> 
-						<div class="formata_subtitulo">Composi&ccedil;&atilde;o do conte&uacute;do</div>
-						
-						<fieldset class="fieldset_ex3">
+			   <div class="formata_texto_ex3">
+			     <fieldset class="fieldset_ex3">
 							<legend class="legend">Subteste</legend>
 							
 							 <div class="div_conteudo">
@@ -313,11 +311,7 @@
 			   <div class="Medicamento-formulario-subtitulo"><a id="control">Controle de qualidade</a></div>
 			   
 			   <div class="formata_texto_ex3">
-			   
-				  
-						<div class="formata_subtitulo">Ensaio de controle de qualidade</div>
-						
-							<fieldset class="fieldset_ex3"><legend class="legend">Ensaio 1</legend>
+			     <fieldset class="fieldset_ex3"><legend class="legend">Ensaio 1</legend>
 							<div class="div_conteudo">
 								<span class="textoLabel">Ensaio terceirizado:</span><br />
 								N&atilde;o

@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+	<link rel="stylesheet" type="text/css" href="menu.css" />
+
+	<script type="text/javascript" language="javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" language="javascript" src="js/maskedinput.js"></script>
+    <script type="text/javascript" language="javascript" src="js/Modal.js"></script>
+    <script type="text/javascript" language="javascript" src="js/geral.js"></script>
+	<script type="text/javascript" language="javascript" src="js/chamada_modal.js"></script>
+	<script type="text/javascript" language="javascript" src="js/jquery.tooltip.js"></script>
+	<script type="text/javascript" language="javascript" src="js/jquery.dimensions.js"></script> 	
+	<script type="text/javascript" language="javascript" src="js/jquery-ui-datepicker.js"></script> 
+	<script type="text/javascript" language="javascript" src="jquery5_2.js"></script>
+	 <script>
+		$(document).ready(function(){
+		 $("dd:not(:last)").hide();
+		 $("dt a").click(function(){
+		  $("dd:visible").slideUp("fast");
+		  $(this).parent().next().slideDown("fast");
+		  return false;
+		 });
+		});
+	</script>
+</head>
+
+<body>
+
+<div id="back_menu">
+			
+			<dl id="menu">
+				 <dt><a href="#loremIpsum"><span onclick="seleciona_menu('menuSubDadosEvento','loremIpsum'); setaclass('expDadosEvento','menuDadosEvento');" id="expDadosEvento" class="menu_marcado seta_link"><img border="0" alt="Abrir" id="menuDadosEvento" src="img/mais_positivo.jpg" /> Produtos</span></a></dt>
+				 <dd><a href="#produto1"><span onclick="seleciona_menu('menuSubTerceiro','produto1'); setaclass('expMenuDados','menuSubDados'); " id="expMenuDados" class="menuFav"><img border="0" alt="Abrir" id="menuSubDados" src="img/mais_positivo.jpg" /> Fluordeoxiglucose </span></a>
+					 <ul class="fechado" id="menuSubTerceiro">
+									<li class="semfilho"><a href="#caract"><span onclick="seleciona_menu('null','caract'); setaclass('menuCaract'); " id="menuCaract" class="menuFav">Caracteriza&ccedil;&atilde;o</span></a></li>
+									<li class="semfilho"><a href="#comp"><span onclick="seleciona_menu('null','comp'); setaclass('menuComp'); " id="menuComp" class="menuFav">Composi&ccedil;&atilde;o</span></a></li>
+									<li class="semfilho"><a href="#process"><span onclick="seleciona_menu('null','process'); setaclass('menuProcess'); " id="menuProcess" class="menuFav" >Processos produtivos</span></a></li>
+									<li class="semfilho"><a href="#control"><span onclick="seleciona_menu('null','control'); setaclass('menuControl'); " id="menuControl" class="menuFav" >Controle de qualidade</span></a></li>
+									<li class="semfilho"><a href="#mud"><span onclick="seleciona_menu('null','mud'); setaclass('menuMud'); " id="menuMud" class="" >Mudan&ccedil;a durante desenvolvimento</span></a></li>
+								</ul>
+				 </dd>
+				 <dt><a href="#ifasCadastradas"><span onclick="seleciona_menu('menuIfa','ifasCadastradas'); setaclass('menuSubIfa','imgIfa');" id="menuSubIfa" class=""><img border="0" alt="Abrir" id="imgIfa" src="img/mais_positivo.jpg" /> IFA </span></a></dt>
+				 <dd>
+					 <ul class="fechado" id="menuIfa">
+                        <li><a href="#subteste"><span onclick="seleciona_menu('menuSubIFA','subteste'); setaclass('menuSubteste','imgSubteste');" id="menuSubteste" class="menuFav"><img border="0" alt="Abrir" id="imgSubteste" src="img/mais_positivo.jpg" /> Subteste</span></a>
+						
+							<ul class="fechado" id="menuSubIFA">
+									<li class="semfilho"><a href="#caracterizacao"><span onclick="seleciona_menu('null','caracterizacao'); setaclass('menuCaracterizacao'); " id="menuCaracterizacao" class="menuFav">Caracteriza&ccedil;&atilde;o</span></a></li>
+									<li class="semfilho"><a href="#CaractIFA"><span onclick="seleciona_menu('null','CaractIFA'); setaclass('menuCaractIFA'); " id="menuCaractIFA" class="menuFav">Caracter&iacute;sticas do IFA</span></a></li>
+									<li class="semfilho"><a href="#ProcessProd"><span onclick="seleciona_menu('null','ProcessProd'); setaclass('menuProcessProd'); " id="menuProcessProd" class="menuFav" >Processos produtivos</span></a></li>
+									<li class="semfilho"><a href="#ControlQuali"><span onclick="seleciona_menu('null','ControlQuali'); setaclass('menuControlQuali'); " id="menuControlQuali" class="menuFav" >Controle de qualidade</span></a></li>
+									<li class="semfilho"><a href="#Est"><span onclick="seleciona_menu('null','Est'); setaclass('menuEst'); " id="menuEst" class="menuFav" >Estudo de estabilidades</span></a></li>s
+									<li class="semfilho"><a href="#Emb"><span onclick="seleciona_menu('null','Emb'); setaclass('menuEmb'); " id="menuEmb" class="menuFav" >Embalagem primária</span></a></li>
+						  </ul>
+								
+						</li>
+						 <li><a href="#zuca"><span onclick="seleciona_menu('null','zuca'); setaclass('menuZuca','imgZuca');" id="menuZuca" class="menuFav"><img border="0" alt="Abrir" id="imgZuca" src="img/mais_positivo.jpg" /> Zucapsaicina</span></a></li>
+                  </ul>
+				 </dd>
+				 <dt><a href="#medicamentos"><span onclick="seleciona_menu('menuSubPaciente','medicamentos'); setaclass('expPaciente','menuPaciente');" id="expPaciente" class=""><img border="0" alt="Abrir" id="menuPaciente" src="img/mais_positivo.jpg" /> Medicamentos </span></a></dt>
+				 <dd>
+					 <ul class="fechado" id="menuSubPaciente">
+                         <li><a href="#aldus_caso"><span onclick="seleciona_menu('menuSubEvento','aldus_caso'); setaclass('menuSubPacienteEvolucao');" id="menuSubPacienteEvolucao" class="">Evolu&ccedil;&atilde;o do caso</span></a></li>
+                       </ul>
+				 </dd>
+				 
+				 <dt class="semfilho seta_link"><a href="#seguranca"><span onclick="setaclass('menu_outra_info'); seleciona_menu(null,'seguranca');" id="menu_outra_info" class="">Seguran&ccedil;a e efic&aacute;cia</span></a></dt>
+				 
+				 <dt class="semfilho seta_link"><a href="#anexos"><span onclick="setaclass('menu_anexos'); seleciona_menu(null,'anexos');" id="menu_anexos" >Acompanhamento</span></a></dt>
+				 
+				 <dt class="semfilho seta_link"><a href="#favoritos"><span onclick="setaclass('menu_favoritos'); seleciona_menu(null,'favoritos');" id="menu_favoritos" >Favoritos</span></a></dt>
+				 
+				</dl>
+			
+               
+</div>
+</body>
+</html>

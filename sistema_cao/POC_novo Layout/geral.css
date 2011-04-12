@@ -35,6 +35,33 @@
 	width:100%;
 }
 
+
+/*primeiro campo de um grupo */
+.primeiro{
+	margin-top:20px!important;
+}
+
+/*Ultimo campo ou fieldset */
+.ultimo{
+	margin-bottom:20px!important;
+}
+
+#cabecalho-app, #cabecalho-app-administrativa {
+	position: relative;
+	background-color: #fff;
+	font-size: 18px;
+	text-align: center;
+	background-image: url('img/back_topo.jpg');
+	height: 45px;
+	width: 100%;
+	padding-top:5px;
+}
+
+#logo-anvisa{
+	left: 10px;
+	top: 30px;
+	float:left;
+}
 /*FORMATA BARRA SUPERIOR COM BOTÕES DE ACESSIBILIDADE */
 .barra_acessibilidade{
 	margin:0px;
@@ -56,6 +83,7 @@
 /*FORMATAÇÃO ICONES BARRA DE TAREFAS*/
 #icones-barra-tarefas{
 	right: 10px;
+	margin-right:5px;
 	color: #fff;
 	font-size: 11px;
 	cursor: pointer;
@@ -93,7 +121,7 @@
 #back_menu{
 	margin-left:-40px;
 	float:left;
-	margin-top:46px;
+	margin-top:100px;
 
 }	
 #menu {
@@ -178,7 +206,7 @@ font-size:11px!important;
 /*DEFINE FORMATAÇÕES DA DIV DO CONTEÚDO*/
 .conteudo{
 	width:73%;
-	padding-top:40px;
+	padding-top:85px;
 	height:100%;
 	float:right;
 	font-family: Tahoma, Arial, Verdana;
@@ -197,22 +225,26 @@ font-size:11px!important;
 .Medicamento-formulario-titulo{ 
 	background-color: #818b94;
 	color: #fff;
+	width:98%;
 	font-size: 12px;
 	margin-bottom:0px!important;
 	padding: 5px 3px;
 	font-weight:bold;
+	margin-left:3px;
+	clear:both;
 }
 
 .Medicamento-formulario-subtitulo{
 	color: #000000;
-	width:100%;
+	width:98%;
 	font-size:12px;
 	margin-top:0px!important;
 	background-color:#CCCCCC;
 	font-weight:bold;
 	margin-bottom:0px!important;
-	padding: 5px 0px;
+	padding: 5px 3px;
 	height:20px;
+	margin-left:3px;
 }
 
 .barra_lateral_direita{
@@ -279,6 +311,7 @@ font-size:11px!important;
 
 .div_conteudo{
 	margin-top:5px;
+	margin-bottom:15px;
 	margin-left:5px;
 }
 
@@ -289,7 +322,8 @@ font-size:11px!important;
 
 .div_conteudo_ex3{
 	margin-top:5px;
-	margin-left:10px;
+	margin-left:20px;
+	margin-bottom:15px;
 }
 
 .legend{
@@ -300,7 +334,6 @@ font-size:11px!important;
 	margin-left:20px;
 	color:#666666;
 	background-color:#FFFFFF;
-	
 }
 
 .fieldset{
@@ -331,7 +364,7 @@ font-size:11px!important;
 
 
 .anexos{
-	margin-left:10px;
+	margin-left:0px;
 	color:#333333;
 }
 
@@ -340,4 +373,56 @@ font-size:11px!important;
 	font-size: 11px;
 	color:#f2c305;
 	font-family:Tahoma, Verdana, Arial;
+}
+
+.tabela-grid {
+font-size: 11px;
+color:#000000;
+background-color:#FFFFFF;
+width:99%;
+font-family:Tahoma, Verdana, Arial;
+border-left:#000000 1px solid;
+border-bottom:#000000 1px solid;
+margin-bottom:10px;
+}
+
+.tabela-grid td{
+border-right:#000000 1px solid;
+border-top:#000000 1px solid;
+padding-left:5px !important;
+height:10px !important;
+}
+
+.titulo-tabela{
+height:25px !important;
+background: url('img/topo_centro.gif');
+color:#f2c305;
+margin-top: 5px;
+text-align:left;
+font-size:12px;
+padding-left:5px !important;
+
+}
+
+.subtitulo2 {
+background-color:#CCCCCC !important;
+font-weight:bold;
+text-align:center;
+color:#000000;
+font-size:11px;
+
+}
+
+.subtitulo3 {
+height:25px !important;
+background-color: #77818a !important;
+width: 100% !important;
+text-align:left;
+color:#ffffff;
+font-size:12px;
+padding-left:5px !important;
+}
+
+.linhaescura {
+background-color:#E6E6E6;
 }

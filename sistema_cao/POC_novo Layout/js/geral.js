@@ -251,11 +251,11 @@ function imprimeCertificado(){
 
 
 function seleciona_menu(div,div2){
-	$("#"+div).toggle();
-	
+	$("li ul li ul li ul").slideUp();
+	$(this).next().slideToggle();	
 	//rola a página para a posição da div menos o tamanho da barra fixa
 	var $target = $("#"+div2);
-	var targetOffset = $target.offset().top - 60;
+	var targetOffset = $target.offset().top - 100;
 	$('html,body').animate({scrollTop: targetOffset});
 
 }
@@ -266,13 +266,19 @@ function setaclass(id,img){
 		$("span").removeClass("menu_marcado");
 		$("#"+id).addClass("menu_marcado");
 		
-		if ($("#"+img).attr("alt")=='abrir'){
+		$(".mudaMenu").click(function(){
+		var item = $(this).attr("class");
+		$("#"+item).addClass("corMenu");
+		
+		});
+
+		/*if ($("#"+img).attr("alt")=='abrir'){
 		$("#"+img).attr("src","img/mais_positivo.jpg");
 		$("#"+img).attr("alt","fechar");
 		}else{
 		$("#"+img).attr("src","img/menos_negativo.jpg");
 		$("#"+img).attr("alt","abrir");
-		}
+		}*/
 
 }
 
