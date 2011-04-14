@@ -260,28 +260,52 @@ function seleciona_menu(div,div2){
 
 }
 		
+$(".mudaMenu").click(function(){
+		var item = $(this).attr("class");
+		$("#"+item).addClass("corMenu");
 		
+		});		
+
 		
 function setaclass(id,img){
 		$("span").removeClass("menu_marcado");
 		$("#"+id).addClass("menu_marcado");
 		
-		$(".mudaMenu").click(function(){
-		var item = $(this).attr("class");
-		$("#"+item).addClass("corMenu");
 		
-		});
 
-		/*if ($("#"+img).attr("alt")=='abrir'){
-		$("#"+img).attr("src","img/mais_positivo.jpg");
-		$("#"+img).attr("alt","fechar");
+		if ($("#"+img).attr("alt")=="abrir"){
+			
+			$("#"+img).attr("src","img/mais_positivo.jpg");
+			$("#"+img).attr("alt","fechar");
 		}else{
-		$("#"+img).attr("src","img/menos_negativo.jpg");
-		$("#"+img).attr("alt","abrir");
-		}*/
-
+			
+			$("#"+img).attr("src","img/menos_negativo.jpg");
+			$("#"+img).attr("alt","abrir");
+		}
+		
+		testeMuda(img,"mudaMenu");
+		
+		
 }
 
+function testeMuda(img,classe){
+	
+	valor = $("#"+img).attr("alt");
+	$("."+classe).attr('alt','abrir');
+	$("."+classe).attr('src','img/mais_positivo.jpg');
+	
+	$("#"+img).attr('alt',valor);
+	
+	if ($("#"+img).attr("alt")=="abrir"){
+			
+			$("#"+img).attr("src","img/mais_positivo.jpg");
+			$("#"+img).attr("alt","fechar");
+		}else{
+			
+			$("#"+img).attr("src","img/menos_negativo.jpg");
+			$("#"+img).attr("alt","abrir");
+		}
+}
 /* ======================================================================================================================================
 														Funções Gerais
 ========================================================================================================================================= */	
