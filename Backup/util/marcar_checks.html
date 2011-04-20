@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sem título</title>
+
+<script type="text/javascript" src="jquery-1.4.4.js"></script>
+<script type="text/javascript">
+
+ $(function(){
+	 /**
+	   *Chamada a função para marcar/desmarcar os checkbox's
+	   * @param {string} Seletor jquery do checkPrincipal
+	   * @param {string} Seletor jquery dos childs
+	   */
+	defCheckBoxGroup(".select-all", '.tag-file');
+});
+	
+	
+
+/**
+     * Usado pra criar checkboxes interdependentes , onde ao selecionar o main ,
+     * todos serão marcados , e onde ao se marcar todos os childs , o main será
+     * marcado automaticamente.
+     *
+     * @param {string} mainSelector Seletor jquery do checkPrincipal
+     * @param {string} childsSelector Seletor jquery dos childs
+     */
+function defCheckBoxGroup(mainSelector, childsSelector){
+    var childs = $(childsSelector);
+    var main = $(mainSelector);
+
+    main.click(function(){
+        childs.attr("checked", $(this).attr("checked") );
+    });
+
+    childs.click(function(){
+        var listaChecks = childs;
+        var selectAllIsChecked = true;
+        listaChecks.each(function(index,element){
+            if($(element).attr("checked")!=true){
+                selectAllIsChecked = false;
+                return false;
+            }
+        });
+        main.attr("checked",selectAllIsChecked);
+    });
+}
+
+/**
+     * Preenche o array com os itens que estão selecionados no momento
+     *  
+     * @param {string} namespace Classe do checkbox que deseja capturar
+     * @param {string} checkBoxClass Usado para formar o nome do array no objeto retornado
+     * @return checkBoxClass
+     * @type object
+     */
+function getCheckSelecteds(namespace, checkBoxClass){
+    var selectedItems = {};
+    selectedItems[namespace] = []
+
+    $("input."+checkBoxClass+":checked").each(function() {
+        selectedItems[namespace].push($(this).val());
+    });
+
+    return selectedItems;
+}
+
+</script>
+
+<input type="checkbox" class="select-all" />
+
+<br />
+<br />
+<br />
+<input type="checkbox" class="tag-file" /><br />
+<input type="checkbox" class="tag-file" /><br />
+<input type="checkbox" class="tag-file" /><br />
+</head>
+
+<body>
+</body>
+</html>
